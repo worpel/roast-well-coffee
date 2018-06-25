@@ -1,4 +1,9 @@
+nav {
+    height: 10vh;
+}
 .acctInfo {
-    background: red;
+    color: white;
+    height: 100%;
+    background: #12291B;
     clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
