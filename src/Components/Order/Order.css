@@ -9,10 +9,24 @@
 }
 
 .tabs {
-  width: 30vw;
   height: 5vh;
   display: flex;
   justify-content: center;
+}
+
+.menuButtons {
+  width: 100vw;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.menuButtons:hover {
+  background-color: darkgrey;
+}
+
+.menuButtons:active {
+  background-color: red;
 }
 
 #coffees {
