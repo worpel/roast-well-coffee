@@ -1,5 +1,7 @@
-body {
-    margin: 0;
-    padding: 0;
+.homepage {
     font-family: sans-serif;
+    background-image: url('../../Images/background2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 90vh;
 }
