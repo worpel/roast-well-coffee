@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Order from './Components/Order/Order';
+import Navbar from './Components/Navbar/Navbar';
+import tachyons from 'tachyons';
 // import './App.css';
 
 class App extends Component {
