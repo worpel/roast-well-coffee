@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './Order.css';
 
-class App extends Component {
+class Order extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Roast Well Coffee Co</h1>
+        <h1>Order</h1>
       </div>
     );
   }
 }
 
-export default App;
+export default Order;

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './Navbar.css';
 
-class App extends Component {
+class Navbar extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Roast Well Coffee Co</h1>
+        <h1>Navbar</h1>
       </div>
     );
   }
 }
 
-export default App;
+export default Navbar;

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './Footer.css';
 
-class App extends Component {
+class Footer extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Roast Well Coffee Co</h1>
+        <h1>Footer</h1>
       </div>
     );
   }
 }
 
-export default App;
+export default Footer;
