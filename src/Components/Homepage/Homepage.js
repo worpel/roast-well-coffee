@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Homepage.css';
-import Background from '../../Images/background2';
+import Background from '../../Images/background2.jpg';
 
 
 const Homepage = () => {
   return (
-    <div className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
+    <div className="mw5 mw7-ns center  pa3 ph5-ns">
+      <h1></h1>
       <img src={Background} alt="background image" />
-      <h1>Homepage</h1>
+
     </div>
   );
 }

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import tachyons from 'tachyons';
+import Homepage from './Components/Homepage/Homepage';
 // import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Roast Well Coffee Co</h1>
+        <Homepage />
       </div>
     );
   }
