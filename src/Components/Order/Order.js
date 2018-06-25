@@ -4,7 +4,7 @@ import './Order.css';
 class Order extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="">
         <h1>Order</h1>
       </div>
     );
