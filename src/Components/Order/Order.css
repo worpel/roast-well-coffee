@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.order {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  width: 30vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+#coffees {
+  width: 50vw;
+}
+
+#pastry {
+  width: 50vw;
+}
