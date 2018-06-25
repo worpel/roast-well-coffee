@@ -4,8 +4,14 @@ import './Order.css';
 class Order extends Component {
   render() {
     return (
-      <div className="">
-        <h1>Order</h1>
+      <div className="order">
+        <div className="tabs" id="coffees">
+          <button onclick="">Coffee</button>
+        </div>
+
+        <div className="tabs" id="pastry">
+          <button onclick="">Pastry</button>
+        </div>
       </div>
     );
   }
