@@ -6,11 +6,15 @@ class Order extends Component {
     return (
       <div className="order">
         <div className="tabs" id="coffees">
-          <button onclick="">Coffee</button>
+          <button className="menuButtons" onclick="">
+            Coffee
+          </button>
         </div>
 
         <div className="tabs" id="pastry">
-          <button onclick="">Pastry</button>
+          <button className="menuButtons" onclick="">
+            Pastry
+          </button>
         </div>
       </div>
     );
