@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './Homepage.css';
+import Background from '../../Images/background2.jpg';
 
-class Homepage extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Homepage</h1>
-      </div>
-    );
-  }
+
+const Homepage = () => {
+  return (
+    <div className="center homepage">
+    </div>
+  );
 }
+
+
 
 export default Homepage;
