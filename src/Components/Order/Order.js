@@ -17,21 +17,23 @@ class Order extends Component {
   render() {
     return (
       <div className="order">
-        <div id="tabs">
-          <div id="coffees">
-            <button className="menuButtons" onClick={this.switchToCoffee}>
-              Coffee
-            </button>
-          </div>
-
-          <div id="pastry">
-            <button className="menuButtons" onClick={this.switchToPastry}>
-              Pastry
-            </button>
-          </div>
+        <div id="coffees">
+          <button className="menuButtons" onClick={this.switchToCoffee}>
+            Coffee
+          </button>
         </div>
-        <div className="firstPane">First Pane - Coffees</div>
-        <div className="secondPane hidden">Second Pane - Pastries</div>
+
+        <div id="pastry">
+          <button className="menuButtons" onClick={this.switchToPastry}>
+            Pastry
+          </button>
+        </div>
+        <div id="tabContent">
+          <div className="firstPane">
+            <img class="coffeeImg" src="http://via.placeholder.com/1000x1000" />
+          </div>
+          <div className="secondPane hidden">Second Pane - Pastries</div>
+        </div>
       </div>
     );
   }
