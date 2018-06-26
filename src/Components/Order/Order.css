@@ -8,8 +8,8 @@
   justify-content: center;
 }
 
-.tabs {
-  height: 5vh;
+#tabs {
+  width: 50vw;
   display: flex;
   justify-content: center;
 }
