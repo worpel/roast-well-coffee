@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Order from './Components/Order/Order';
 import tachyons from 'tachyons';
+import Logo from './Components/Logo/Logo';
 // import './App.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
+        <Logo />
         <Homepage />
         <Order />
         <Footer />
