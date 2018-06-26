@@ -10,7 +10,7 @@ class Footer extends Component {
           <p className="mh5">
             Phone<br />
             E-mail<br />
-            Carrier Pidgeon<br />
+            Carrier Pigeon<br />
             Paper Airoplane <br />
           </p>
         </div>
@@ -27,9 +27,9 @@ class Footer extends Component {
           </p>
         </div>
         <div className="Map fl w-30">
-          <p className="mh5">Instagram tile images</p>
+          <p className="mh5 instatile">Instagram tile images</p>
           <div>
-            <img className='instatile' src='instacoffee.jpg' />
+            <img src='instacoffee.jpg' />
           </div>
         </div>
         <div className="flex socials mt3 fl w-100">
