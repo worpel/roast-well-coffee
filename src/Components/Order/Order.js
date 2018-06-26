@@ -15,13 +15,13 @@ class Order extends Component {
     pastry.classList.remove('hidden');
   };
 
-  fetchProducts = (product) => {
+  fetchProducts = product => {
     fetch(`http://localhost:3001/${product}`)
-        .then(resp => resp.json())
-        .then(data => {
-            console.log(data);
-        })
-  }
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data);
+      });
+  };
 
   render() {
     this.fetchProducts('drinks');

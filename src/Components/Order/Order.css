@@ -1,6 +1,7 @@
 .hidden {
   display: none;
 }
+
 .order {
   margin: 0 auto;
   width: 90vw;
@@ -8,6 +9,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url('../../Images/background1.jpg');
+  background-size: cover;
+  background-position: bottom;
+  height: 90vh;
+  opacity: 0.4;
 }
 
 #coffees,
@@ -45,7 +51,7 @@
 }
 
 .coffeeImg {
-  width: 15%;
+  width: 20%;
   height: auto;
   border-radius: 50%;
 }
