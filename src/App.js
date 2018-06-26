@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Homepage from './Components/Homepage/Homepage';
 import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer';
+import Homepage from './Components/Homepage/Homepage';
 import Order from './Components/Order/Order';
+import Footer from './Components/Footer/Footer';
 import tachyons from 'tachyons';
 import Logo from './Components/Logo/Logo';
 // import './App.css';
