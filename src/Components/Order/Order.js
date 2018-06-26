@@ -14,6 +14,7 @@ class Order extends Component {
     coffee.classList.add('hidden');
     pastry.classList.remove('hidden');
   };
+
   render() {
     return (
       <div className="order">
