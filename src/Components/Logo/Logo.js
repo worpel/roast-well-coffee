@@ -1,13 +1,12 @@
-// import React, { Component } from 'react';
-// import './Navbar.css';
+// import React from 'react';
+// import './Logo.css';
 
-// const Logo {
+// const Logo = () => ({
 //     render() {
 //         return (
-//             <div>
-
-//             </div>
-
+//             <nav >
+//                 <div></div>
+//             </nav>
 //         );
 //     }
 // }
