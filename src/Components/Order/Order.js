@@ -15,12 +15,6 @@ class Order extends Component {
     pastry.classList.remove('hidden');
   };
 
-  timeSelector = () => {
-    let hour = [7,8,9,10,11,12,13,14,15,16,17,18,19];
-    let minute = [05,10,15,20,25,30,35,40,45,50,55];
-
-  }
-
   render() {
     return (
       <div className="order">
@@ -38,8 +32,6 @@ class Order extends Component {
 
         <div className="firstPane">First Pane - Coffees</div>
         <div className="secondPane hidden">Second Pane - Pastries</div>
-
-
       </div>
     );
   }
