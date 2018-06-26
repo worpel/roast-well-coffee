@@ -8,17 +8,30 @@ import Logo from './Components/Logo/Logo';
 // import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Navbar />
-        {/* <Logo /> */}
-        <Homepage />
-        <Order />
-        <Footer />
-      </div>
-    );
-  }
+    constructor() {
+        super();
+        this.state = {
+            route: 'home'
+        };
+    }
+
+    onRouteChange = route => {
+        this.setState({ route: route });
+    };
+
+    render() {
+      const {route} = this.state;
+        return (
+            <div className="App">
+                <Navbar route={route} onRouteChange={this.onRouteChange} />
+                {/* <Logo /> */}
+                {route === 'home' ?
+                <Homepage /> :
+                <Order /> }
+                <Footer />
+            </div>
+        );
+    }
 }
 
 export default App;
