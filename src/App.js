@@ -25,9 +25,7 @@ class App extends Component {
             <div className="App">
                 <Navbar route={route} onRouteChange={this.onRouteChange} />
                 {/* <Logo /> */}
-                {route === 'home' ?
-                <Homepage /> :
-                <Order /> }
+                {route === 'home' ? <Homepage /> : <Order /> }
                 <Footer />
             </div>
         );
