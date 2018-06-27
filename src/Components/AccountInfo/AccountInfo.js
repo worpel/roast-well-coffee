@@ -12,9 +12,9 @@ class AccountInfo extends Component {
             type: ''
         };
     }
-    render() {
-        const { fetchApi } = this.props;
-        const userData = fetchApi('users/1')
+    componentDidMount() {
+      const { fetchApi } = this.props;
+      fetchApi('users/1')
             .then(resp => resp.json())
             .then(data => {
                 const { name, type, favDrink, rewardPoints, email } = data[0];
@@ -29,9 +29,10 @@ class AccountInfo extends Component {
             .catch(err => {
                 console.log(err);
             });
-
-        return !userData ? (
-            <div>Loading</div>
+    }
+    render() {
+        return !this.state.name ? (
+            <div>Loading...</div>
         ) : (
             <div className="accountInfo">
                 <div className="messages mh5 fl w-80">
