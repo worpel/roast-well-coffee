@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css';
+import insta from '../../Images/instacoffee.jpg'
 
 class Footer extends Component {
   render() {
@@ -29,7 +30,7 @@ class Footer extends Component {
         <div className="Map fl w-30">
           <p className="mh5 instatile">Instagram tile images</p>
           <div>
-            <img src='instacoffee.jpg' />
+            <img src={insta} />
           </div>
         </div>
         <div className="flex socials mt3 fl w-100">
