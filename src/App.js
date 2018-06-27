@@ -37,9 +37,9 @@ class App extends Component {
         return (
             // <Router>
             <div className="App">
-           
+
                 <Navbar route={route} onRouteChange={this.onRouteChange} />
-                {route === 'home' ? <AccountInfo fetchApi={this.fetchApi}/> : <Order fetchApi={this.fetchApi} /> }
+                {route === 'home' ? <AccountInfo fetchApi={this.fetchApi} /> : <Order fetchApi={this.fetchApi} />}
                 {/* <Switch>
                     <Route exact path="/" Component={Homepage} />
                     <Route path="/account" Component={AccountInfo} />
