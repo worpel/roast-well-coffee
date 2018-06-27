@@ -9,14 +9,27 @@ import tachyons from 'tachyons';
 import Logo from './Components/Logo/Logo';
 import AccountInfo from './Components/AccountInfo/AccountInfo';
 // import './App.css';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import {
+    Switch,
+    Route,
+    BrowserRouter as Router
+} from 'react-router-dom';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      route: 'home',
-      currentUser: {}
+    constructor() {
+        super();
+        this.state = {
+            route: 'home',
+            currentUser: {}
+        };
+    }
+
+    onRouteChange = route => {
+        this.setState({ route: route });
+    };
+
+    fetchApi = table => {
+        return fetch(`http://localhost:3001/${table}`);
     };
 
     render() {
@@ -48,3 +61,4 @@ export default App;
 
 // {/* <Logo /> */}
 // {route === 'order' ? <Homepage /> : <Order fetchApi={this.fetchApi} /> }
+
