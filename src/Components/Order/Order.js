@@ -41,10 +41,7 @@ class Order extends Component {
         </div>
         <div id="tabContent">
           <div className="firstPane">
-            <img
-              className="coffeeImg"
-              src="http://via.placeholder.com/1000x1000"
-            />
+            <img className="coffeeImg" src="http://via.placeholder.com/1000x1000" />
           </div>
           <div className="secondPane hidden">Second Pane - Pastries</div>
         </div>
