@@ -79,11 +79,11 @@ class AccountInfo extends Component {
                             </div>
                         )}
                     {this.state.type === 'personal' ? (
-                        <div className="personal details fl w-100 mv5">
-                            <p className="details">
-                                Hey there {this.state.name}! Hope you're having an
-                                awesome day.
-                        </p>
+                        <div className="personal details fl w-100">
+                            Hey there {this.state.name}! Hope you're having an
+                            awesome day.
+                                <p className="details">
+                            </p>
                             <p>Your registered e-mail is {this.state.email}</p>
                         </div>
                     ) : (

@@ -7,7 +7,6 @@
 .instatile {
     width: 50px;
     height: 50px;
-    /* background-image: url('../../Images/instacoffee.jpg'); */
 }
 
 .footerstyle {
@@ -16,6 +15,13 @@
 }
 
 footer {
+    height: 50vh;
+    background: rgba(164, 177, 203, 1);
+    /* opacity: 0.5; */
+}
+
+.instagram {
     height: 40vh;
-    background: grey;
+    width: 40vh;
+    justify-content: right;
 }
