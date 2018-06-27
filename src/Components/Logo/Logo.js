@@ -1,5 +1,5 @@
 // import React from 'react';
-// import './Logo.css';
+// import Logo from './Logo.css';
 
 // const Logo = () => ({
 //     render() {
@@ -10,5 +10,4 @@
 //         );
 //     }
 // }
-
 // export default Logo;

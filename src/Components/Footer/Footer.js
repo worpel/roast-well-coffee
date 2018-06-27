@@ -5,24 +5,39 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-          <div className="locationInfo fl w-30">
-            <p className="mh5">Username</p>
-            <p className="mh5">Account Settings</p>
+        <div className="locationInfo fl w-30">
+          <p className="mh5">Contact Us</p>
+          <p className="mh5">
+            Phone<br />
+            E-mail<br />
+            Carrier Pigeon<br />
+            Paper Airoplane <br />
+          </p>
+        </div>
+        <div className="openingHours fl w-30">
+          <p className="mh5">Hours</p>
+          <p className="mh5">
+            Mon 7am-6pm<br />
+            Tues 7am-6pm<br />
+            Wed 7am-6pm<br />
+            Thurs 7am-6pm<br />
+            Fri 7am-6pm<br />
+            Sat 8am-9pm<br />
+            Sun 8am-5pm<br />
+          </p>
+        </div>
+        <div className="Map fl w-30">
+          <p className="mh5 instatile">Instagram tile images</p>
+          <div>
+            <img src='instacoffee.jpg' />
           </div>
-          <div className="openingHours fl w-30">
-            <p className="mh5">Hours</p>
-            <p className="mh5">Don't bother, we're closed</p>
-          </div>
-          <div className="Map fl w-30">
-            <p className="mh5">MAP GOES HERE</p>
-          </div>
-          <div className="flex socials mt3 fl w-100">
-          <p>Instagram</p>
+        </div>
+        <div className="flex socials mt3 fl w-100">
           <p>Facebook</p>
           <p>Twitter</p>
           <p>Feefo</p>
-          </div>
-        </footer>
+        </div>
+      </footer>
     );
   }
 }
