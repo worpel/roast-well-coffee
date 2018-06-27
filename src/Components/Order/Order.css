@@ -50,6 +50,10 @@
   justify-content: center;
 }
 
+.item-table {
+  color: purple;
+}
+
 .coffeeImg {
   width: 20%;
   height: auto;
