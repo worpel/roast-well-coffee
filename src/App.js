@@ -5,18 +5,29 @@ import Order from './Components/Order/Order';
 import Footer from './Components/Footer/Footer';
 import tachyons from 'tachyons';
 import Logo from './Components/Logo/Logo';
+import AccountInfo from './Components/AccountInfo/AccountInfo';
 // import './App.css';
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            route: 'home'
+            route: 'home',
+            currentUser: {}
         };
     }
 
     onRouteChange = route => {
         this.setState({ route: route });
+    };
+
+    fetchApi = table => {
+      return fetch(`http://localhost:3001/${table}`)
+        // .then(resp => resp.json())
+        // .then(data => {
+        //   console.log(data);
+        //   return data;
+        // });
     };
 
     render() {
@@ -25,7 +36,9 @@ class App extends Component {
             <div className="App">
                 <Navbar route={route} onRouteChange={this.onRouteChange} />
                 {/* <Logo /> */}
-                {route === 'home' ? <Homepage /> : <Order /> }
+                {/* {route === 'home' ? <Homepage /> : <Order fetchApi={this.fetchApi} /> } */}
+                {route === 'home' ? <AccountInfo fetchApi={this.fetchApi}/> : <Order fetchApi={this.fetchApi} /> }
+                
                 <Footer />
             </div>
         );

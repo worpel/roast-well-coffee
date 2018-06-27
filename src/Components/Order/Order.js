@@ -15,17 +15,10 @@ class Order extends Component {
     pastry.classList.remove('hidden');
   };
 
-  fetchProducts = product => {
-    fetch(`http://localhost:3001/${product}`)
-      .then(resp => resp.json())
-      .then(data => {
-        console.log(data);
-      });
-  };
-
   render() {
-    this.fetchProducts('drinks');
-    this.fetchProducts('pastries');
+    const {fetchApi} = this.props;
+    fetchApi('drinks');
+    fetchApi('pastries');
     return (
       <div className="order">
         <div id="coffees">
