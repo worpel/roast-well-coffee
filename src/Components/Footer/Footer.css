@@ -7,5 +7,15 @@
 .instatile {
     width: 50px;
     height: 50px;
-    background-image: url('../../Images/instacoffee.jpg');
+    /* background-image: url('../../Images/instacoffee.jpg'); */
+}
+
+.footerstyle {
+    background: #637aa6;
+    opacity: 0.5;
+}
+
+footer {
+    height: 40vh;
+    background: grey;
 }
