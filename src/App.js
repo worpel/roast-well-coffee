@@ -9,52 +9,50 @@ import tachyons from 'tachyons';
 import Logo from './Components/Logo/Logo';
 import AccountInfo from './Components/AccountInfo/AccountInfo';
 // import './App.css';
-import {
-    Switch,
-    Route,
-    BrowserRouter as Router
-} from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            route: 'home',
-            currentUser: {}
-        };
-    }
-
-    onRouteChange = route => {
-        this.setState({ route: route });
+  constructor() {
+    super();
+    this.state = {
+      route: 'home',
+      currentUser: {}
     };
+  }
 
-    fetchApi = table => {
-        return fetch(`http://localhost:3001/${table}`);
-    };
+  onRouteChange = route => {
+    this.setState({ route: route });
+  };
 
-    render() {
-        const { route } = this.state;
-        return (
-            // <Router>
-            <div className="App">
+  fetchApi = table => {
+    return fetch(`http://localhost:3001/${table}`);
+  };
 
-                <Navbar route={route} onRouteChange={this.onRouteChange} />
-                {route === 'home' ? <AccountInfo fetchApi={this.fetchApi} /> : <Order fetchApi={this.fetchApi} />}
-                {/* <Switch>
+  render() {
+    const { route } = this.state;
+    return (
+      // <Router>
+      <div className="App">
+        <Navbar route={route} onRouteChange={this.onRouteChange} />
+        {route === 'order' ? (
+          <AccountInfo fetchApi={this.fetchApi} />
+        ) : (
+          <Order fetchApi={this.fetchApi} />
+        )}
+        {/* <Switch>
                     <Route exact path="/" Component={Homepage} />
                     <Route path="/account" Component={AccountInfo} />
                     <Route path="/shops" Component={OurShops} />
                     <Route path="/order" Component={Order} />
                 </Switch> */}
-                <Footer />
-            </div>
-            // </Router>
-        );
-    }
+        <Footer />
+      </div>
+      // </Router>
+    );
+  }
 }
 
 export default App;
 
 // {/* <Logo /> */}
 // {route === 'order' ? <Homepage /> : <Order fetchApi={this.fetchApi} /> }
-
