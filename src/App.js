@@ -32,9 +32,8 @@ class App extends Component {
             <div className="App">
                 <Navbar route={route} onRouteChange={this.onRouteChange} />
                 {/* <Logo /> */}
-                {/* {route === 'home' ? <Homepage /> : <Order fetchApi={this.fetchApi} /> } */}
-                {route === 'home' ? <AccountInfo fetchApi={this.fetchApi}/> : <Order fetchApi={this.fetchApi} /> }
-                
+                {route === 'order' ? <Homepage /> : <Order fetchApi={this.fetchApi} /> }
+                {/* {route === 'home' ? <AccountInfo fetchApi={this.fetchApi}/> : <Order fetchApi={this.fetchApi} /> } */}
                 <Footer />
             </div>
         );
