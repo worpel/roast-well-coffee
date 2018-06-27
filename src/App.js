@@ -23,11 +23,7 @@ class App extends Component {
 
     fetchApi = table => {
       return fetch(`http://localhost:3001/${table}`)
-        // .then(resp => resp.json())
-        // .then(data => {
-        //   console.log(data);
-        //   return data;
-        // });
+
     };
 
     render() {
