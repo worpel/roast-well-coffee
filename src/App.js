@@ -8,7 +8,7 @@ import OurShops from './Components/OurShops/OurShops';
 import tachyons from 'tachyons';
 import Logo from './Components/Logo/Logo';
 import AccountInfo from './Components/AccountInfo/AccountInfo';
-// import './App.css';
+import './App.css';
 import {
     Switch,
     Route,
@@ -20,7 +20,8 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
-            currentUser: {}
+            currentUser: {},
+            userName: 'Not logged in yet'
         };
     }
 
@@ -38,12 +39,11 @@ class App extends Component {
             <Router>
             <div className="App">
 
-                <Navbar route={route} onRouteChange={this.onRouteChange} />
-                {/* {route === 'home' ? <AccountInfo fetchApi={this.fetchApi} /> : <Order fetchApi={this.fetchApi} />} */}
+                <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
                 <Switch>
                     <Route exact path="/" component={Homepage} />
                     <Route path="/account" render={props => 
-                        <AccountInfo {...props} fetchApi={this.fetchApi} />
+                        <AccountInfo {...props} fetchApi={this.fetchApi} userName={this.userName} />
                     } />
                     <Route path="/shops" component={OurShops} />
                     <Route path="/order" render={props => 
@@ -58,7 +58,3 @@ class App extends Component {
 }
 
 export default App;
-
-// {/* <Logo /> */}
-// {route === 'order' ? <Homepage /> : <Order fetchApi={this.fetchApi} /> }
-

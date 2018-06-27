@@ -13,11 +13,10 @@ class AccountInfo extends Component {
         };
     }
     componentDidMount() {
-        const { fetchApi } = this.props;
+        const { fetchApi, userName } = this.props;
         fetchApi('users/1')
             .then(resp => resp.json())
             .then(data => {
-                console.log(data)
                 const { name, type, favDrink, rewardPoints, email } = data[0];
                 this.setState({
                     name: name,
@@ -26,7 +25,6 @@ class AccountInfo extends Component {
                     email: email,
                     type: type
                 });
-                console.log(this.state)
             })
             .catch(err => {
                 console.log(err);
