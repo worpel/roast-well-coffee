@@ -35,20 +35,24 @@ class App extends Component {
     render() {
         const { route } = this.state;
         return (
-            // <Router>
+            <Router>
             <div className="App">
 
                 <Navbar route={route} onRouteChange={this.onRouteChange} />
-                {route === 'home' ? <AccountInfo fetchApi={this.fetchApi} /> : <Order fetchApi={this.fetchApi} />}
-                {/* <Switch>
-                    <Route exact path="/" Component={Homepage} />
-                    <Route path="/account" Component={AccountInfo} />
-                    <Route path="/shops" Component={OurShops} />
-                    <Route path="/order" Component={Order} />
-                </Switch> */}
+                {/* {route === 'home' ? <AccountInfo fetchApi={this.fetchApi} /> : <Order fetchApi={this.fetchApi} />} */}
+                <Switch>
+                    <Route exact path="/" component={Homepage} />
+                    <Route path="/account" render={props => 
+                        <AccountInfo {...props} fetchApi={this.fetchApi} />
+                    } />
+                    <Route path="/shops" component={OurShops} />
+                    <Route path="/order" render={props => 
+                        <Order {...props} fetchApi={this.fetchApi} />
+                    } />
+                </Switch>
                 <Footer />
             </div>
-            // </Router>
+            </Router>
         );
     }
 }
