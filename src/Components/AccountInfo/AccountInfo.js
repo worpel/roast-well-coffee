@@ -58,26 +58,27 @@ class AccountInfo extends Component {
         return !this.state.name ? (
             <div>Loading...</div>
         ) : (
-            <div className="accountInfo">
-                <div className="messages fl w-100">
+            <div className="accountInfo flex center flex-column justify-center">
+                <div className="messages">
                     {this.state.type === 'personal' ? (
-                        <div className="personal messages">
+                        <div className="ph3 mh2 mv5">
                             {/* Personal Account */}
                             <p>
                                 Promo: Double Doughnut Wednesdays! Come in
-                                between 1100 and 1300 Wednesdays for Buy One Get
+                                between <span className="highlight">1100 and 1300 Wednesdays</span> for Buy One Get
                                 One Free!
                             </p>
                             <p>
                                 Also don't forget if you order ahead before 0900
-                                you get 30% off a {this.state.favDrink}.
+                                you get 30% off a <span className="highlight">{this.state.favDrink}</span>
                             </p>
                         </div>
                     ) : (
                         <div>
                             {/* Business Account */}
-                            <div className="business messages">
-                                <p>Business Account</p>
+                            <div className="ph3 mh2 mv5">
+                                <p>Account Messages</p>
+                                <p className="mh4">We will soon be getting in a Micro Lot from Tanzania, likely at around £17/kg. A tad dearer than normal but if your business uses pour-overs this is a <i>must have</i>.</p>
                             </div>
                         </div>
                     )}
@@ -87,10 +88,9 @@ class AccountInfo extends Component {
                         {/* Personal Account */}
                         <div
                             id="personalHistory"
-                            className="history mh2 fl w-50"
+                            className="history mh2 mv5 tc flex flex-column"
                         >
                             <p>Personal history</p>
-                            <ul />
                         </div>
                     </div>
                 ) : (
@@ -98,28 +98,26 @@ class AccountInfo extends Component {
                         {/* Business Account */}
                         <div
                             id="businessHistory"
-                            className="history mh2 fl w-100"
+                            className="history mv5 tc flex flex-column"
                         >
-                            {' '}
                         </div>
-                        <p>Business History</p>
-                        <ul />
                     </div>
                 )}
                 {this.state.type === 'personal' ? (
-                    <div className="personaldetails fl w-100">
-                        Hey there {this.state.name}! Hope you're having an
-                        awesome day.
-                        <p className="details" />
-                        <p>Your registered e-mail is {this.state.email}</p>
+                    <div className="tc mv6">
+                        <p className="mv5">Hey there {this.state.name}! Hope you're having an
+                        awesome day.</p>
+                        <p>Your registered e-mail is <span className="highlight">{this.state.email}</span></p>
+                        <p>If this is not correct please contact us to change your registered email</p>
                     </div>
                 ) : (
-                    <div className="business details fl w-100">
-                        <p>
+                    <div className="tc mv6">
+                        <p className="mv5">
                             Hey there {this.state.name}! Hope you're having an
                             awesome day!
                         </p>
-                        <p>Your registered e-mail is {this.state.email}</p>
+                        <p>Your registered e-mail is <span className="highlight">{this.state.email}</span></p>
+                        <p>If this is not correct please contact us to change your registered email</p>
                     </div>
                 )}
             </div>

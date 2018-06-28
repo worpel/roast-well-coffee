@@ -3,7 +3,6 @@
 }
 
 .order {
-  width: 90vw;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -13,19 +12,30 @@
   background-position: bottom;
 }
 
-#coffees,
-#pastry {
-  width: 45vw;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-}
-
-.menuButtons {
+#buttons {
   width: 100vw;
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+.btn {
+  padding: 0;
+  margin: 0;
+  width: 49vw;
+  height: 4rem;
+  background: #f4d7a2;
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  background: #e2f4fb;
+}
+
+.btn:active {
+  background: lightblue;
+  color: white;
 }
 
 .menuButtons:hover {
@@ -33,17 +43,12 @@
 }
 
 .menuButtons:active {
-  background-color: red;
+  background-color: burlywood;
 }
 
 #tabContent {
   width: 100%;
   height: 100%;
-}
-
-#firstPane {
-  width: 50vw;
-  height: 100vh;
 }
 
 .item-pane {

@@ -15,21 +15,13 @@ import {
 } from 'react-router-dom';
 
 import tachyons from 'tachyons';
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-
-
-
-library.add(fab, faStar);
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
             route: 'home',
-            currentUser: 4,
+            currentUser: 1,
             userName: 'Not logged in yet'
         };
     }
@@ -46,21 +38,21 @@ class App extends Component {
         const { route } = this.state;
         return (
             <Router>
-            <div className="App">
+                <div className="App flex flex-column">
 
-                <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
-                <Switch>
-                    <Route exact path="/" component={Homepage} />
-                    <Route path="/account" render={props => 
-                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUser={this.state.currentUser} />
-                    } />
-                    <Route path="/shops" component={OurShops} />
-                    <Route path="/order" render={props => 
-                        <Order {...props} fetchApi={this.fetchApi} />
-                    } />
-                </Switch>
-                <Footer />
-            </div>
+                    <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
+                    <Switch>
+                        <Route exact path="/" component={Homepage} />
+                        <Route path="/account" render={props =>
+                            <AccountInfo {...props} fetchApi={this.fetchApi} currentUser={this.state.currentUser} />
+                        } />
+                        <Route path="/shops" component={OurShops} />
+                        <Route path="/order" render={props =>
+                            <Order {...props} fetchApi={this.fetchApi} />
+                        } />
+                    </Switch>
+                    <Footer />
+                </div>
             </Router>
         );
     }
