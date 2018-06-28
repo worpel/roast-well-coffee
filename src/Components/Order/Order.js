@@ -11,6 +11,7 @@ class Order extends Component {
     {
       this.state.drinks.forEach(el => {
         let item = document.createElement('tr');
+        item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         item.textContent = el.name;
         document.getElementById('drinks-list').appendChild(item);
       });
@@ -20,6 +21,9 @@ class Order extends Component {
     {
       this.state.pastries.forEach(el => {
         let item = document.createElement('tr');
+        let itemImg = document.createElement('img');
+        item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
+        console.log(item.classList);
         item.textContent = el.name;
         document.getElementById('pastries-list').appendChild(item);
       });
@@ -80,16 +84,22 @@ class Order extends Component {
           </button>
         </div>
         <div id="tabContent">
-          <div id="coffee-panel" className="firstPane">
-            <table class="item-table" id="drinks-list">
+          <div id="coffee-panel" className="item-pane firstPane">
+            <table
+              className="item-table flex flex-column justify-around"
+              id="drinks-list"
+            >
               {/* <img
                             className="coffeeImg"
                             src="http://via.placeholder.com/1000x1000"
                         /> */}
             </table>
           </div>
-          <div id="pastry-panel" className="secondPane hidden">
-            <table class="item-table" id="pastries-list" />
+          <div id="pastry-panel" className="item-pane secondPane hidden">
+            <table
+              className="item-table flex flex-column justify-around"
+              id="pastries-list"
+            />
           </div>
         </div>
       </div>

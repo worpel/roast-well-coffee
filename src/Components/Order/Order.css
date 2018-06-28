@@ -40,18 +40,23 @@
 }
 
 #tabContent {
-  color: red;
+  width: 100%;
+  height: 100%;
 }
 
 #firstPane {
   width: 50vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
+}
+
+.item-pane {
+  width: 100%;
+  height: 100%;
 }
 
 .item-table {
-  color: purple;
+  width: 100%;
+  height: 100%;
 }
 
 .coffeeImg {
