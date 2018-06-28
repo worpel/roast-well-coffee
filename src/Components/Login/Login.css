@@ -2,10 +2,25 @@
     border: 1px solid black;
     border-radius: 20%;
     transition: 400ms;
+    outline: none;
 }
 
 .submit:hover {
-    background: black;
+    background: grey;
     color: white;
     transition: 300ms;
+}
+
+.submit:active {
+    background: black;
+    transition: 100ms;
+}
+
+input[type="password"], input[type="email"] {
+    height: 3rem;
+    outline: none;
+}
+
+input[type="password"]:focus, input[type="email"]:focus {
+    border: 2px solid burlywood;
 }
