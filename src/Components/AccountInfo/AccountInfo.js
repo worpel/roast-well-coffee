@@ -75,7 +75,7 @@ class AccountInfo extends Component {
                             </div>
                         )}
                     {this.state.type === 'personal' ? (
-                        <div className="personal details fl w-100">
+                        <div className="personaldetails fl w-100">
                             Hey there {this.state.name}! Hope you're having an
                             awesome day.
                                 <p className="details">
