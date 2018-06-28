@@ -7,10 +7,10 @@
 
 .history {
     background: rgba(208, 214, 207, 0.5);
-
 }
 
-.wrapper, .history {
+.wrapper,
+.history {
     width: 45vw;
     min-height: 60vh;
     margin: 0 2vw;
@@ -18,5 +18,5 @@
 
 .highlight {
     font-weight: 700;
-    color: rgb(10, 175, 10);
+    color: burlywood;
 }

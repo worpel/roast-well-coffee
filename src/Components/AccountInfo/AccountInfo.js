@@ -20,11 +20,11 @@ class AccountInfo extends Component {
             newItem.innerHTML =
                 this.state.type === 'personal'
                     ? `<p>${el.size ? el.size : ''} ${
-                          el.name
-                      } - £${el.price.toFixed(2)}`
+                    el.name
+                    } - £${el.price.toFixed(2)}`
                     : `<p>${el.name}(£${el.price.toFixed(2)}) x ${
-                          el.quantity
-                      } - £${(el.quantity * el.price).toFixed(2)}`;
+                    el.quantity
+                    } - £${(el.quantity * el.price).toFixed(2)}`;
             document
                 .getElementById(`${this.state.type}History`)
                 .appendChild(newItem);
@@ -107,50 +107,50 @@ class AccountInfo extends Component {
 
                 <div
                     id="personalHistory"
-                    className="history mh2 mv5 tc flex flex-column"
+                    className="history mh2 mv5 tc flex flex-column shadow-5"
                 >
                     <p>Personal history</p>
                 </div>
             </div>
         ) : (
-            // Business Account
-            <div className="accountInfo flex flex-wrap justify-center">
-                <div className="wrapper">
-                    <div className="messages">
-                        <div className="ph3 mh2 mv5">
-                            <p>Account Messages</p>
-                            <p className="mh4">
-                                We will soon be getting in a Micro Lot from
-                                Tanzania, likely at around £17/kg. A tad dearer
-                                than normal but if your business uses pour-overs
+                    // Business Account
+                    <div className="accountInfo flex flex-wrap justify-center">
+                        <div className="wrapper">
+                            <div className="messages">
+                                <div className="ph3 mh2 mv5">
+                                    <p>Account Messages</p>
+                                    <p className="mh4">
+                                        We will soon be getting in a Micro Lot from
+                                        Tanzania, likely at around £17/kg. A tad dearer
+                                        than normal but if your business uses pour-overs
                                 this is a <i>must have</i>.
                             </p>
+                                </div>
+                            </div>
+                            <div className="status tc mv4">
+                                <p className="mv5">
+                                    Hey there {this.state.name}! Hope you're having an
+                                    awesome day.
+                        </p>
+                                <p>
+                                    Your registered e-mail is{' '}
+                                    <span className="highlight">
+                                        {this.state.email}
+                                    </span>
+                                </p>
+                                <p>
+                                    If this is not correct please contact us to change
+                                    your registered email
+                        </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="status tc mv4">
-                        <p className="mv5">
-                            Hey there {this.state.name}! Hope you're having an
-                            awesome day.
-                        </p>
-                        <p>
-                            Your registered e-mail is{' '}
-                            <span className="highlight">
-                                {this.state.email}
-                            </span>
-                        </p>
-                        <p>
-                            If this is not correct please contact us to change
-                            your registered email
-                        </p>
-                    </div>
-                </div>
 
-                <div
-                    id="businessHistory"
-                    className="history mv5 tc flex flex-column"
-                />
-            </div>
-        );
+                        <div
+                            id="businessHistory"
+                            className="history mv5 tc flex flex-column shadow-5"
+                        />
+                    </div>
+                );
     }
 }
 

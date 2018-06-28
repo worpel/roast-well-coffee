@@ -17,6 +17,7 @@
 footer {
     height: 50vh;
     background: rgba(164, 177, 203, 1);
+    flex-wrap: wrap;
     /* opacity: 0.5; */
 }
 
