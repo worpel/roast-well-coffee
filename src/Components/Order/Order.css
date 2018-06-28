@@ -29,7 +29,7 @@
   width: 49vw;
   height: 4rem;
   background: #f4d7a2;
-  border: none;
+  border: 0.2px solid grey;
   outline: none;
 }
 

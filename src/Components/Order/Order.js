@@ -58,18 +58,14 @@ class Order extends Component {
       this.state.pastries.forEach(el => {
         const create = el => document.createElement(el);
         let row = create('tr');
+        let list = create('ul');
         let nameTd = create('td');
-        let allergensTd = create('td');
+        let allergens = create('li');
         let priceTd = create('td');
-        let selectBox1 = create('select');
-        selectBox1.innerHTML = `<option>${el.allergens[0]}</option><option>${
-          el.allergens[1]
-        }</option>`;
         nameTd.textContent = el.name;
         priceTd.textContent = `Total: £${el.price.toFixed(2)}`;
-        allergensTd.appendChild(selectBox1);
         row.appendChild(nameTd);
-        row.appendChild(allergensTd);
+        list.appendChild(allergens);
         row.appendChild(priceTd);
         row.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         document.getElementById('pastries-list').appendChild(row);
