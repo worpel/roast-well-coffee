@@ -10,7 +10,7 @@
 }
 
 footer {
-    height: 50vh;
+    /* height: 50vh; */
     background: rgba(164, 177, 203, 1);
     font-family: 'Pontano Sans', sans-serif;
 }
@@ -18,7 +18,36 @@ footer {
 .instagram,
 .tile2,
 .tile3 {
-    height: 18vh;
-    width: 18vh;
-    justify-content: right;
+    height: 15vh;
+    width: 15vh;
+    /* justify-content: right; */
+}
+
+@media screen and (max-width: 1107px) {
+    .openingHours p, .locationInfo p {
+        font-size: 1rem;
+    }
+
+    .stylefooter img {
+        height: 14vh;
+        width: 14vh;
+    }
+}
+
+@media screen and (max-width: 976px) {
+    .locationInfo, .openingHours {
+        width: 45vw !important;
+        text-align: center;
+    }
+    .stylefooter {
+        width: 100vw !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .images {
+        justify-content: center;
+    }
+    footer{
+        align-items: center;
+    }
 }
