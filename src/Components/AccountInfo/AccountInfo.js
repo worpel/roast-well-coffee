@@ -17,7 +17,6 @@ class AccountInfo extends Component {
     updateHistory = data => {
         this.state.history.forEach(el => {
             let newItem = document.createElement('div');
-            newItem.classList = 'mh4'
             newItem.innerHTML = this.state.type === 'personal' ?
             `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}` :
             `<p>${el.name}(£${el.price.toFixed(2)}) x ${el.quantity} - £${(el.quantity*el.price).toFixed(2)}`
@@ -62,7 +61,7 @@ class AccountInfo extends Component {
             <div className="accountInfo flex center flex-column justify-center">
                 <div className="messages">
                     {this.state.type === 'personal' ? (
-                        <div className="personal messages">
+                        <div className="tc">
                             {/* Personal Account */}
                             <p>
                                 Promo: Double Doughnut Wednesdays! Come in
@@ -77,7 +76,7 @@ class AccountInfo extends Component {
                     ) : (
                         <div>
                             {/* Business Account */}
-                            <div className="mh2 business messages">
+                            <div className="ph3 mh2 mv5">
                                 <p>Account Messages</p>
                                 <p className="mh4">We will soon be getting in a Micro Lot from Tanzania, likely at around £17/kg. A tad dearer than normal but if your business uses pour-overs this is a <i>must have</i>.</p>
                             </div>
@@ -89,10 +88,9 @@ class AccountInfo extends Component {
                         {/* Personal Account */}
                         <div
                             id="personalHistory"
-                            className="history mh2 fl w-50"
+                            className="history mh2"
                         >
                             <p>Personal history</p>
-                            <ul />
                         </div>
                     </div>
                 ) : (
@@ -100,26 +98,26 @@ class AccountInfo extends Component {
                         {/* Business Account */}
                         <div
                             id="businessHistory"
-                            className="history mh2 flex flex-column"
+                            className="history mv5 tc flex flex-column"
                         >
                         </div>
-                        <ul />
                     </div>
                 )}
                 {this.state.type === 'personal' ? (
-                    <div className="personaldetails fl w-100">
+                    <div className="tc">
                         Hey there {this.state.name}! Hope you're having an
                         awesome day.
                         <p className="details" />
                         <p>Your registered e-mail is {this.state.email}</p>
                     </div>
                 ) : (
-                    <div className="business details fl w-100">
-                        <p>
+                    <div className="tc mv6">
+                        <p className="mv3">
                             Hey there {this.state.name}! Hope you're having an
                             awesome day!
                         </p>
-                        <p>Your registered e-mail is {this.state.email}</p>
+                        <p>Your registered e-mail is <span className="highlight">{this.state.email}</span></p>
+                        <p>If this is not correct please contact us to change your registered email</p>
                     </div>
                 )}
             </div>
