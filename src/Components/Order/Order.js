@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Checkbox from './Checkbox';
 import './Order.css';
 
 class Order extends Component {
@@ -26,7 +27,7 @@ class Order extends Component {
         let itemSelect = document.createElement('input');
         item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         item.textContent = el.name;
-        itemSelect.attributes.type = 'checkbox';
+        itemSelect.type.add = 'checkbox';
         console.log(itemSelect.attributes.type);
         document.getElementById('pastries-list').appendChild(item);
       });
@@ -88,12 +89,11 @@ class Order extends Component {
         </div>
         <div id="tabContent">
           <div id="coffee-panel" className="item-pane firstPane">
-            <table className="item-table flex flex-column" id="drinks-list">
-              {/* <img
+            <table className="item-table flex flex-column" id="drinks-list" />
+            {/* <img
                             className="coffeeImg"
                             src="http://via.placeholder.com/1000x1000"
                         /> */}
-            </table>
           </div>
           <div id="pastry-panel" className="item-pane secondPane hidden">
             <table className="item-table flex flex-column" id="pastries-list" />
