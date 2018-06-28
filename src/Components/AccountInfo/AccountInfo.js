@@ -61,16 +61,16 @@ class AccountInfo extends Component {
             <div className="accountInfo flex center flex-column justify-center">
                 <div className="messages">
                     {this.state.type === 'personal' ? (
-                        <div className="tc">
+                        <div className="ph3 mh2 mv5">
                             {/* Personal Account */}
                             <p>
                                 Promo: Double Doughnut Wednesdays! Come in
-                                between 1100 and 1300 Wednesdays for Buy One Get
+                                between <span className="highlight">1100 and 1300 Wednesdays</span> for Buy One Get
                                 One Free!
                             </p>
                             <p>
                                 Also don't forget if you order ahead before 0900
-                                you get 30% off a {this.state.favDrink}.
+                                you get 30% off a <span className="highlight">{this.state.favDrink}</span>
                             </p>
                         </div>
                     ) : (
@@ -88,7 +88,7 @@ class AccountInfo extends Component {
                         {/* Personal Account */}
                         <div
                             id="personalHistory"
-                            className="history mh2"
+                            className="history mh2 mv5 tc flex flex-column"
                         >
                             <p>Personal history</p>
                         </div>
@@ -104,15 +104,15 @@ class AccountInfo extends Component {
                     </div>
                 )}
                 {this.state.type === 'personal' ? (
-                    <div className="tc">
-                        Hey there {this.state.name}! Hope you're having an
-                        awesome day.
-                        <p className="details" />
-                        <p>Your registered e-mail is {this.state.email}</p>
+                    <div className="tc mv6">
+                        <p className="mv5">Hey there {this.state.name}! Hope you're having an
+                        awesome day.</p>
+                        <p>Your registered e-mail is <span className="highlight">{this.state.email}</span></p>
+                        <p>If this is not correct please contact us to change your registered email</p>
                     </div>
                 ) : (
                     <div className="tc mv6">
-                        <p className="mv3">
+                        <p className="mv5">
                             Hey there {this.state.name}! Hope you're having an
                             awesome day!
                         </p>
