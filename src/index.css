@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Asap|Didact+Gothic|Karla|Libre+Franklin|Pontano+Sans|Quattrocento+Sans|Questrial|Quicksand|Work+Sans');
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', courier, sans serif;
+    font-family: 'Abel', sans-serif;
+    /* font-family: 'Pontano Sans', sans-serif; */
     font-size: 1.5em;
+    letter-spacing: 4px;
 }
 
 a {
-  color: lightslategray;
+    color: lightslategray;
     text-decoration: none;
     position: relative;
     padding-bottom: 4px;
@@ -25,6 +28,7 @@ a:before {
     transform: scaleX(0);
     transition: 0.3s ease-out;
 }
+
 a:hover {
     color: burlywood;
 }
