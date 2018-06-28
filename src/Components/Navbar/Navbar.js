@@ -3,7 +3,6 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import mainLogo from '../../Images/roastwelllogo.png'
 import octagon from '../../Images/octagon.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 class Navbar extends Component {
