@@ -13,16 +13,15 @@ class AccountInfo extends Component {
             history: []
         };
     }
-    addPersonalHistory = data => {
+
+    updateHistory = data => {
         this.state.history.forEach(el => {
             let newItem = document.createElement('div');
-            newItem.innerHTML = `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}`
+            newItem.innerHTML = this.state.type === 'personal' ?
+            `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}` :
+            `<p>${el.name}(£${el.price.toFixed(2)}) x ${el.quantity} - £${(el.quantity*el.price).toFixed(2)}`
             document.getElementById(`${this.state.type}History`).appendChild(newItem)
         })
-    }
-
-    addBusinessHistory = data => {
-        
     }
 
     componentDidMount() {
@@ -45,12 +44,11 @@ class AccountInfo extends Component {
         fetchApi(`history/${currentUser}`)
             .then(resp => resp.json())
             .then(data => {
-                console.log(data);
                 const { productsOrdered } = data[0];
                 this.setState({
                     history: productsOrdered
                 });
-                this.addPersonalHistory();
+                this.updateHistory(this.state.history);
             })
             .catch(err => {
                 console.log(err);
