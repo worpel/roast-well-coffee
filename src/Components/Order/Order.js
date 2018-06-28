@@ -10,31 +10,46 @@ class Order extends Component {
   updateDrinksList = () => {
     {
       this.state.drinks.forEach(el => {
-        let row = document.createElement('tr');
-        let nameTd = document.createElement('td');
-        let sizeTd = document.createElement('td');
-        let milkTd = document.createElement('td');
-        let selectBox = document.createElement('select');
-        let selectBox2 = document.createElement('select');
-        selectBox.innerHTML = `<option>${el.sizes[0]}</option><option>${
+        const create = el => document.createElement(el);
+        let row = create('tr');
+
+        let nameTd = create('td');
+        let sizeTd = create('td');
+        let milkTd = create('td');
+        let syrupsTd = create('td');
+        let optionsTd = create('td');
+        let priceTd = create('td');
+
+        let selectBox1 = create('select');
+        let selectBox2 = create('select');
+        let selectBox3 = create('select');
+        let selectBox4 = create('select');
+        selectBox1.innerHTML = `<option>${el.sizes[0]}</option><option>${
           el.sizes[1]
         }</option>`;
         selectBox2.innerHTML = `<option>${el.milk[0]}</option><option>${
           el.milk[1]
-        }</option>`;
-        sizeTd.appendChild(selectBox);
-        milkTd.appendChild(selectBox);
+        }</option><option>${el.milk[2]}</option>`;
+        selectBox3.innerHTML = `<option>${el.syrups[0]}</option><option>${
+          el.syrups[1]
+        }</option><option>${el.syrups[2]}</option>`;
+        selectBox4.innerHTML = `<option>${el.options[0]}</option><option>${
+          el.options[1]
+        }</option><option>${el.options[2]}</option>`;
         nameTd.textContent = el.name;
+        priceTd.textContent = `Total: £${el.price.toFixed(2)}`;
+        sizeTd.appendChild(selectBox1);
+        milkTd.appendChild(selectBox2);
+        syrupsTd.appendChild(selectBox3);
+        optionsTd.appendChild(selectBox4);
         row.appendChild(nameTd);
         row.appendChild(sizeTd);
         row.appendChild(milkTd);
+        row.appendChild(syrupsTd);
+        row.appendChild(optionsTd);
+        row.appendChild(priceTd);
         row.classList.add('pv5', 'ph4', 'tableRow', 'bb');
-        // let itemImg = document.createElement('img');
-        // let itemSelect = document.createElement('option');
-
-        // item.textContent = el.name;
         document.getElementById('drinks-list').appendChild(row);
-        // document.getElementById('drinks-list').appendChild(itemSelect);
       });
     }
   };
