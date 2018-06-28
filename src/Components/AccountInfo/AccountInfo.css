@@ -1,6 +1,7 @@
 .accountInfo {
     max-width: 80vw;
     margin: 0 auto;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)), url('../../Images/background12.jpg');
 }
 
 .personaldetails {
