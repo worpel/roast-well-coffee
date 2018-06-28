@@ -29,7 +29,7 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
-            currentUser: {},
+            currentUser: 2,
             userName: 'Not logged in yet'
         };
     }
@@ -52,7 +52,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Homepage} />
                     <Route path="/account" render={props => 
-                        <AccountInfo {...props} fetchApi={this.fetchApi} userName={this.userName} />
+                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUser={this.state.currentUser} />
                     } />
                     <Route path="/shops" component={OurShops} />
                     <Route path="/order" render={props => 
