@@ -19,7 +19,9 @@ class Navbar extends Component {
         </div>
         <div className="acctInfo flex flex-inline tc">
           <p className="ph2 center"><Link to='/account'>Account Settings</Link></p>
+          <p className="hBreak">|</p>
           <p className="ph2 center"><Link to='/order'>Order</Link></p>
+          <p className="hBreak">|</p>
           <p className="ph2 center"><Link to='/ourshops'>Our Shops</Link></p>
         </div>
         <div>

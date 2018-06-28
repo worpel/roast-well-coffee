@@ -29,7 +29,7 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
-            currentUser: 2,
+            currentUser: 4,
             userName: 'Not logged in yet'
         };
     }
