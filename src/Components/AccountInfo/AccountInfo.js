@@ -13,6 +13,18 @@ class AccountInfo extends Component {
             history: []
         };
     }
+    addPersonalHistory = data => {
+        this.state.history.forEach(el => {
+            let newItem = document.createElement('div');
+            newItem.innerHTML = `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}`
+            document.getElementById(`${this.state.type}History`).appendChild(newItem)
+        })
+    }
+
+    addBusinessHistory = data => {
+        
+    }
+
     componentDidMount() {
         const { fetchApi, currentUser } = this.props;
         fetchApi(`users/${currentUser}`)
@@ -33,15 +45,12 @@ class AccountInfo extends Component {
         fetchApi(`history/${currentUser}`)
             .then(resp => resp.json())
             .then(data => {
+                console.log(data);
                 const { productsOrdered } = data[0];
                 this.setState({
                     history: productsOrdered
                 });
-                this.state.history.forEach(el => {
-                    let newItem = document.createElement('div');
-                    newItem.innerHTML = `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}`
-                    document.getElementById(`${this.state.type}History`).appendChild(newItem)
-                })
+                this.addPersonalHistory();
             })
             .catch(err => {
                 console.log(err);
