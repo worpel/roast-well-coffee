@@ -10,11 +10,26 @@ class Order extends Component {
   updateDrinksList = () => {
     {
       this.state.drinks.forEach(el => {
-        let item = document.createElement('tr');
-        let itemImg = document.createElement('img');
-        item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
-        item.textContent = el.name;
-        document.getElementById('drinks-list').appendChild(item);
+        let row = document.createElement('tr');
+        let nameTd = document.createElement('td');
+        let sizeTd = document.createElement('td');
+        let selectBox = document.createElement('select');
+        console.log(el);
+        selectBox.innerHTML = `<option>${el.sizes[0]}</option><option>${
+          el.sizes[1]
+        }</option>`;
+        sizeTd.appendChild(selectBox);
+        nameTd.textContent = el.name;
+        console.log(nameTd);
+        row.appendChild(nameTd);
+        row.appendChild(sizeTd);
+        row.classList.add('pv5', 'ph4', 'tableRow', 'bb');
+        // let itemImg = document.createElement('img');
+        // let itemSelect = document.createElement('option');
+
+        // item.textContent = el.name;
+        document.getElementById('drinks-list').appendChild(row);
+        // document.getElementById('drinks-list').appendChild(itemSelect);
       });
     }
   };
@@ -23,12 +38,11 @@ class Order extends Component {
       this.state.pastries.forEach(el => {
         let item = document.createElement('tr');
         let itemImg = document.createElement('img');
-        let itemSelect = document.createElement('input');
+        let itemSelect = document.createElement('option');
         item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         item.textContent = el.name;
-        itemSelect.type.add = 'checkbox';
-        console.log(itemSelect.attributes.type);
         document.getElementById('pastries-list').appendChild(item);
+        document.getElementById('pastries-list').appendChild(itemSelect);
       });
     }
   };
@@ -69,13 +83,15 @@ class Order extends Component {
       <div className="order">
         <div id="buttons" className="flex">
           <button
-            id="coffee" className="btn"
+            id="coffee"
+            className="btn"
             onClick={e => this.switchTabs(e.target.id)}
           >
             Coffee
           </button>
           <button
-            id="pastry" className="btn"
+            id="pastry"
+            className="btn"
             onClick={e => this.switchTabs(e.target.id)}
           >
             Pastry
@@ -83,14 +99,19 @@ class Order extends Component {
         </div>
         <div id="tabContent">
           <div id="coffee-panel" className="item-pane firstPane">
-            <table className="item-table flex flex-column" id="drinks-list" />
+            <table className="item-table flex flex-column">
+              <tbody id="drinks-list" />
+              {/* <select id="drinks-checkbox" className="item-checkbox" /> */}
+            </table>
             {/* <img
                             className="coffeeImg"
                             src="http://via.placeholder.com/1000x1000"
                         /> */}
           </div>
           <div id="pastry-panel" className="item-pane secondPane hidden">
-            <table className="item-table flex flex-column" id="pastries-list" />
+            <table className="item-table flex flex-column">
+              <tbody id="pastries-list" />
+            </table>
           </div>
         </div>
       </div>
