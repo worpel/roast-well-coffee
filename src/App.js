@@ -5,6 +5,7 @@ import Order from './Components/Order/Order';
 import Footer from './Components/Footer/Footer';
 import OurShops from './Components/OurShops/OurShops';
 import AccountInfo from './Components/AccountInfo/AccountInfo';
+import Login from './Components/Login/Login';
 
 import './App.css';
 
@@ -21,7 +22,7 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
-            currentUserId: 4,
+            currentUserId: 2,
             currentUser: {},
             loggedIn: false
         };
@@ -35,18 +36,30 @@ class App extends Component {
         return fetch(`http://localhost:3001/${table}`);
     };
 
+    checkUserLogin = userdata => {
+        const {email, password} = userdata;
+        this.setState({
+            loggedIn: true
+        })
+    }
+
     render() {
         const { route } = this.state;
         return (
             <Router>
             <div className="App flex flex-column">
 
-                <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
+                <Navbar userName={this.state.userName} loggedIn={this.state.loggedIn}/>
                 <Switch>
                     <Route exact path="/" component={Homepage} />
-                    <Route path="/account" render={props => 
+                    {this.state.loggedIn === true ?
+                        <Route path="/account" render={props => 
                         <AccountInfo {...props} fetchApi={this.fetchApi} currentUserId={this.state.currentUserId} />
                     } />
+                    :
+                    <Route path="/login" render={props => 
+                        <Login {...props} fetchApi={this.checkUserLogin} />
+                    }/>}
                     <Route path="/shops" component={OurShops} />
                     <Route path="/order" render={props => 
                         <Order {...props} fetchApi={this.fetchApi} />
