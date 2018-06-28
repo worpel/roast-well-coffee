@@ -21,8 +21,14 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
+<<<<<<< HEAD
             currentUser: 1,
             userName: 'Not logged in yet'
+=======
+            currentUserId: 4,
+            currentUser: {},
+            loggedIn: false
+>>>>>>> ciaransBranch
         };
     }
 
@@ -38,6 +44,7 @@ class App extends Component {
         const { route } = this.state;
         return (
             <Router>
+<<<<<<< HEAD
                 <div className="App flex flex-column">
 
                     <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
@@ -53,6 +60,23 @@ class App extends Component {
                     </Switch>
                     <Footer />
                 </div>
+=======
+            <div className="App flex flex-column">
+
+                <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
+                <Switch>
+                    <Route exact path="/" component={Homepage} />
+                    <Route path="/account" render={props => 
+                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUserId={this.state.currentUserId} />
+                    } />
+                    <Route path="/shops" component={OurShops} />
+                    <Route path="/order" render={props => 
+                        <Order {...props} fetchApi={this.fetchApi} />
+                    } />
+                </Switch>
+                <Footer />
+            </div>
+>>>>>>> ciaransBranch
             </Router>
         );
     }
