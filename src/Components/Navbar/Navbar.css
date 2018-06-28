@@ -7,6 +7,60 @@ nav {
 }
 
 .javalogo {
-    height: 13rem;
-    width: 13rem;
+    height: 180px;
+    width: 180px;
+}
+
+/* .hBreak {
+    margin-left: 1rem;
+    margin-right: 1rem;
+} */
+
+/* .username {
+    margin-top: -0.7rem;
+} */
+
+@media screen and (max-width: 950px) {
+    .javalogo {
+        height: 130px;
+        width: 130px;
+    }
+    .hBreak {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    nav {
+        margin-top: 1rem !important;
+        height: 10vh;
+    }
+    .javalogo {
+        margin-top: 5.5rem;
+        height: 200px;
+        width: 200px;
+    }
+    .acctInfo {
+        flex-direction: column;
+    }
+    .username {
+        margin-top: 4rem;
+    }
+    .currentpoints {
+        display: none;
+    }
+    .hBreak {
+        margin: 0;
+        display: none;
+    }
+    .linkitem {
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .username {
+        display: none;
+    }
 }

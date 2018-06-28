@@ -15,22 +15,15 @@ import {
 } from 'react-router-dom';
 
 import tachyons from 'tachyons';
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-
-
-
-library.add(fab, faStar);
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
             route: 'home',
-            currentUser: 2,
-            userName: 'Not logged in yet'
+            currentUserId: 4,
+            currentUser: {},
+            loggedIn: false
         };
     }
 
@@ -52,7 +45,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Homepage} />
                     <Route path="/account" render={props => 
-                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUser={this.state.currentUser} />
+                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUserId={this.state.currentUserId} />
                     } />
                     <Route path="/shops" component={OurShops} />
                     <Route path="/order" render={props => 

@@ -28,13 +28,13 @@
   margin: 0;
   width: 49vw;
   height: 4rem;
-  background: white;
+  background: #f4d7a2;
   border: none;
   outline: none;
 }
 
 .btn:hover {
-  background: lightcyan;
+  background: #e2f4fb;
 }
 
 .btn:active {
@@ -47,7 +47,7 @@
 }
 
 .menuButtons:active {
-  background-color: red;
+  background-color: burlywood;
 }
 
 #tabContent {
