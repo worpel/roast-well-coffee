@@ -1,6 +1,6 @@
 .submit {
     border: 1px solid black;
-    border-radius: 20%;
+    border-radius: 1rem;
     transition: 400ms;
     outline: none;
 }
