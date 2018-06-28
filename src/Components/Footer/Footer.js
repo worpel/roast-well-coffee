@@ -28,7 +28,9 @@ class Footer extends Component {
           </p>
         </div>
         <div className="stylefooter w-40">
-          <p className="f3 center">Instagram</p>
+          <a href="https://www.instagram.com/?hl=en">
+            <p className="f3 center">Instagram</p>
+          </a>
           <div className="images flex center">
             <img className="instagram shadow-6" src={insta} />
             <img className="tile2 shadow-6" src={tile2} />
@@ -36,13 +38,13 @@ class Footer extends Component {
           </div>
         </div>
         <div className="flex socials w-100">
-          <a href="">
+          <a href="https://en-gb.facebook.com/">
             <p>Facebook</p>
           </a>
-          <a href="">
+          <a href="https://twitter.com/twitter?lang=en">
             <p>Twitter</p>
           </a>
-          <a href="">
+          <a href="https://www.feefo.com/">
             <p>Feefo</p>
           </a>
         </div>
