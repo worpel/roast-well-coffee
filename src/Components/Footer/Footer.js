@@ -32,19 +32,21 @@ class Footer extends Component {
           </div>
           <div className='stylefooter'>
             <div className="Map fl w-30">
-              <p className='f3 center'>Instagram</p>
+              <a href="https://www.instagram.com/?hl=en">
+                <p className='f3 center'>Instagram</p>
+              </a>
               <img className='instagram shadow-6' src={insta} />
               <img className='tile2 shadow-6' src={tile2} />
               <img className='tile3 shadow-6' src={tile3} />
             </div>
             <div className="flex socials fl w-100">
-              <a href="">
+              <a href="https://en-gb.facebook.com/">
                 <p>Facebook</p>
               </a>
-              <a href="">
+              <a href="https://twitter.com/twitter?lang=en">
                 <p>Twitter</p>
               </a>
-              <a href="">
+              <a href="https://www.feefo.com/">
                 <p>Feefo</p>
               </a>
             </div>
