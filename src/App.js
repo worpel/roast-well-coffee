@@ -33,13 +33,11 @@ class App extends Component {
     };
 
     checkLoginValid = userdata => {
-        console.log(userdata);
         const { email, password } = userdata;
         let users = this.fetchApi('users')
             .then(resp => resp.json())
             .then(data =>
                 data.forEach(el => {
-                    console.log(data);
                     if (email === el.email && password === el.password) {
                         this.setState({
                             currentUser: el,
