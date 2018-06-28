@@ -17,6 +17,7 @@ class AccountInfo extends Component {
     updateHistory = data => {
         this.state.history.forEach(el => {
             let newItem = document.createElement('div');
+            newItem.classList = 'mh4'
             newItem.innerHTML = this.state.type === 'personal' ?
             `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}` :
             `<p>${el.name}(£${el.price.toFixed(2)}) x ${el.quantity} - £${(el.quantity*el.price).toFixed(2)}`
@@ -58,8 +59,8 @@ class AccountInfo extends Component {
         return !this.state.name ? (
             <div>Loading...</div>
         ) : (
-            <div className="accountInfo">
-                <div className="messages fl w-100">
+            <div className="accountInfo flex center flex-column justify-center">
+                <div className="messages">
                     {this.state.type === 'personal' ? (
                         <div className="personal messages">
                             {/* Personal Account */}
@@ -76,8 +77,9 @@ class AccountInfo extends Component {
                     ) : (
                         <div>
                             {/* Business Account */}
-                            <div className="business messages">
-                                <p>Business Account</p>
+                            <div className="mh2 business messages">
+                                <p>Account Messages</p>
+                                <p className="mh4">We will soon be getting in a Micro Lot from Tanzania, likely at around £17/kg. A tad dearer than normal but if your business uses pour-overs this is a <i>must have</i>.</p>
                             </div>
                         </div>
                     )}
@@ -98,11 +100,9 @@ class AccountInfo extends Component {
                         {/* Business Account */}
                         <div
                             id="businessHistory"
-                            className="history mh2 fl w-100"
+                            className="history mh2 flex flex-column"
                         >
-                            {' '}
                         </div>
-                        <p>Business History</p>
                         <ul />
                     </div>
                 )}
