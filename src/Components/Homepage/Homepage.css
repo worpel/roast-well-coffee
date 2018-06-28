@@ -4,5 +4,6 @@
     background-size: cover;
     background-position: bottom;
     height: 90vh;
+    width: 100%;
     opacity: 0.8;
 }
