@@ -3,8 +3,18 @@
     margin: 0 auto;
 }
 
-.history {
-    height: 30vh;
+.personaldetails {
+    background: rgba(208, 214, 207, 0.5);
+    margin: 0.5rem;
     width: 80vw;
-    border: 1px solid #99a8c5;
+    flex: display;
+    justify-content: center;
+}
+
+.history {
+    background: rgba(208, 214, 207, 0.5);
+    margin: 0.5rem;
+    width: 80vw;
+    flex: display;
+    justify-content: center;
 }
