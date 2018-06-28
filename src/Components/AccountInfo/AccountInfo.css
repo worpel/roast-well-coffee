@@ -1,0 +1,10 @@
+.accountInfo {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.history {
+    height: 30vh;
+    width: 80vw;
+    border: 1px solid #99a8c5;
+}

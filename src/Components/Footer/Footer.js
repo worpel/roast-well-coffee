@@ -11,10 +11,8 @@ class Footer extends Component {
           <div className="locationInfo fl w-30">
             <p className="mh5">Contact Us</p>
             <p className="mh5">
-              Phone<br />
-              E-mail<br />
-              Carrier Pigeon<br />
-              Paper Airoplane <br />
+              Phone: 02083356788<br />
+              E-mail: roastwell@gmail.com<br />
             </p>
           </div>
           <div className="openingHours fl w-30">
@@ -31,11 +29,11 @@ class Footer extends Component {
           </div>
           <div className='stylefooter'>
             <div className="Map fl w-30">
-              <p className="mh5 instatile">Instagram tile images</p>
-              <img src={insta} />
+              <p className='f4 center'>Instagram</p>
+              <img className='instagram shadow-5' src={insta} />
 
             </div>
-            <div className="flex socials mt3 fl w-100">
+            <div className="flex socials fl w-100">
               <p>Facebook</p>
               <p>Twitter</p>
               <p>Feefo</p>
