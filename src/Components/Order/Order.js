@@ -67,20 +67,15 @@ class Order extends Component {
   render() {
     return (
       <div className="order">
-        <div id="coffees">
+        <div id="buttons" className="flex">
           <button
-            id="coffee"
-            className="menuButtons"
+            id="coffee" className="btn"
             onClick={e => this.switchTabs(e.target.id)}
           >
             Coffee
           </button>
-        </div>
-
-        <div id="pastry">
           <button
-            id="pastry"
-            className="menuButtons"
+            id="pastry" className="btn"
             onClick={e => this.switchTabs(e.target.id)}
           >
             Pastry
