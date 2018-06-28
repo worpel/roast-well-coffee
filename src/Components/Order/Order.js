@@ -56,13 +56,23 @@ class Order extends Component {
   updatePastriesList = () => {
     {
       this.state.pastries.forEach(el => {
-        let item = document.createElement('tr');
-        let itemImg = document.createElement('img');
-        let itemSelect = document.createElement('option');
-        item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
-        item.textContent = el.name;
-        document.getElementById('pastries-list').appendChild(item);
-        document.getElementById('pastries-list').appendChild(itemSelect);
+        const create = el => document.createElement(el);
+        let row = create('tr');
+        let nameTd = create('td');
+        let allergensTd = create('td');
+        let priceTd = create('td');
+        let selectBox1 = create('select');
+        selectBox1.innerHTML = `<option>${el.allergens[0]}</option><option>${
+          el.allergens[1]
+        }</option>`;
+        nameTd.textContent = el.name;
+        priceTd.textContent = `Total: £${el.price.toFixed(2)}`;
+        allergensTd.appendChild(selectBox1);
+        row.appendChild(nameTd);
+        row.appendChild(allergensTd);
+        row.appendChild(priceTd);
+        row.classList.add('pv5', 'ph4', 'tableRow', 'bb');
+        document.getElementById('pastries-list').appendChild(row);
       });
     }
   };
