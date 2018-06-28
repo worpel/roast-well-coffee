@@ -21,7 +21,7 @@ class Navbar extends Component {
           {loggedIn ?
             <p className="ph2 center linkitem"><Link to='/account'>Account</Link></p>
             :
-            <p className="ph2 center linkitem"><Link to='/login'>Log In</Link></p>}
+            <p className="ph2 center linkitem"><Link to='/account'>Log In</Link></p>}
           <p className="hBreak">|</p>
           <p className="ph2 center linkitem"><Link to='/order'>Order</Link></p>
           <p className="hBreak">|</p>
