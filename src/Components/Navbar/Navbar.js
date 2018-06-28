@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import mainLogo from '../../Images/roastwelllogo.png'
+import octagon from '../../Images/octagon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -17,14 +18,12 @@ class Navbar extends Component {
           <div />
           <p className="tc mt2">Username</p>
           <hr className="mv0" />
-          <p className="tc f2">4<FontAwesomeIcon icon="star" /></p>
+          <p className="octagon tr f2">4<img src={octagon} /></p>
         </div>
         <div className="acctInfo flex flex-inline tc">
           <p className="mt5 center"><Link to='/account'>Account Settings</Link></p>
           <p className="mt5 center"><Link to='/order'>Order</Link></p>
           <p className="mt5 center"><Link to='/ourshops'>Our Shops</Link></p>
-        </div>
-        <div className="hexagon">
         </div>
       </nav>
     );

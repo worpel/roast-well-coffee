@@ -11,3 +11,7 @@ nav {
 .javalogo {
     margin: 0 auto;
 }
+
+.octagon {
+    display: flex;
+}
