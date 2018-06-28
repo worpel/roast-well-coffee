@@ -11,14 +11,14 @@ nav {
     width: 180px;
 }
 
-.hBreak {
+/* .hBreak {
     margin-left: 1rem;
     margin-right: 1rem;
-}
+} */
 
-.username {
+/* .username {
     margin-top: -0.7rem;
-}
+} */
 
 @media screen and (max-width: 950px) {
     .javalogo {
@@ -45,7 +45,7 @@ nav {
         flex-direction: column;
     }
     .username {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
     .currentpoints {
         display: none;
