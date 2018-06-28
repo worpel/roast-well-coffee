@@ -15,6 +15,10 @@ footer {
     font-family: 'Pontano Sans', sans-serif;
 }
 
+.socials a {
+    color: white;
+}
+
 .instagram,
 .tile2,
 .tile3 {
