@@ -10,21 +10,22 @@ class Navbar extends Component {
   render() {
     return (
 
-      <nav className="mb5 mt5 flex justify-between items-center">
+      <nav className="mv5 mh2 flex justify-between items-center">
         <div className='javalogo tc'>
           <Link to='/'><img src={mainLogo} /></Link>
         </div>
-        <div className="acctInfo tc ph1 tc">
-          <div />
-          <p className="tc">Username</p>
+        <div className="username tc ph1 tc">
+          <p className="username">Username</p>
         </div>
         <div className="acctInfo flex flex-inline tc">
-          <p className="ph2 center"><Link to='/account'>Account Settings</Link></p>
-          <p className="ph2 center"><Link to='/order'>Order</Link></p>
-          <p className="ph2 center"><Link to='/ourshops'>Our Shops</Link></p>
+          <p className="ph2 center linkitem"><Link to='/account'>Account Settings</Link></p>
+          <p className="hBreak">|</p>
+          <p className="ph2 center linkitem"><Link to='/order'>Order</Link></p>
+          <p className="hBreak">|</p>
+          <p className="ph2 center linkitem"><Link to='/ourshops'>Our Shops</Link></p>
         </div>
-        <div>
-          <p className="tc f3">4<FontAwesomeIcon icon="star" /></p>
+        <div className="currentpoints">
+          <p className="tc pb4 f3">4</p>
         </div>
       </nav>
     );

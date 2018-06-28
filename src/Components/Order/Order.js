@@ -26,7 +26,7 @@ class Order extends Component {
         let itemSelect = document.createElement('input');
         item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         item.textContent = el.name;
-        itemSelect.attributes.type = 'checkbox';
+        itemSelect.type.add = 'checkbox';
         console.log(itemSelect.attributes.type);
         document.getElementById('pastries-list').appendChild(item);
       });
@@ -67,20 +67,15 @@ class Order extends Component {
   render() {
     return (
       <div className="order">
-        <div id="coffees">
+        <div id="buttons" className="flex">
           <button
-            id="coffee"
-            className="menuButtons"
+            id="coffee" className="btn"
             onClick={e => this.switchTabs(e.target.id)}
           >
             Coffee
           </button>
-        </div>
-
-        <div id="pastry">
           <button
-            id="pastry"
-            className="menuButtons"
+            id="pastry" className="btn"
             onClick={e => this.switchTabs(e.target.id)}
           >
             Pastry
@@ -88,12 +83,11 @@ class Order extends Component {
         </div>
         <div id="tabContent">
           <div id="coffee-panel" className="item-pane firstPane">
-            <table className="item-table flex flex-column" id="drinks-list">
-              {/* <img
+            <table className="item-table flex flex-column" id="drinks-list" />
+            {/* <img
                             className="coffeeImg"
                             src="http://via.placeholder.com/1000x1000"
                         /> */}
-            </table>
           </div>
           <div id="pastry-panel" className="item-pane secondPane hidden">
             <table className="item-table flex flex-column" id="pastries-list" />

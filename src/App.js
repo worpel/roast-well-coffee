@@ -15,21 +15,13 @@ import {
 } from 'react-router-dom';
 
 import tachyons from 'tachyons';
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-
-
-
-library.add(fab, faStar);
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
             route: 'home',
-            currentUser: 2,
+            currentUser: 4,
             userName: 'Not logged in yet'
         };
     }
