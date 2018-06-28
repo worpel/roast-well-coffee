@@ -38,9 +38,15 @@ class Footer extends Component {
               <img className='tile3 shadow-6' src={tile3} />
             </div>
             <div className="flex socials fl w-100">
-              <p>Facebook</p>
-              <p>Twitter</p>
-              <p>Feefo</p>
+              <a href="">
+                <p>Facebook</p>
+              </a>
+              <a href="">
+                <p>Twitter</p>
+              </a>
+              <a href="">
+                <p>Feefo</p>
+              </a>
             </div>
           </div>
 
