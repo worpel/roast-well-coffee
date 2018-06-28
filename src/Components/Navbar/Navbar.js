@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import mainLogo from '../../Images/roastwelllogo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 class Navbar extends Component {
@@ -12,16 +13,16 @@ class Navbar extends Component {
         <div className='javalogo fl w-20 tc'>
         <Link to='/'><img src={mainLogo} /></Link>
         </div>
-        <div className="acctInfo tr fl ph1 w-20 tc">
+        <div className="acctInfo tc fl ph1 w-20 tc">
           <div />
-          <p className="mv3 mh5">Username</p>
-          <hr/>
-          <p className="br-pill flex tr mh5 pa3 ma">4 Points</p>
+          <p className="tc mt2">Username</p>
+          <hr className="mv0"/>
+          <p className="tc f2">4<FontAwesomeIcon icon="star"/></p>
         </div>
-        <div className="acctInfo fl w-20 tc">
-          <p className="mv1 mh5"><Link to='/account'>Account Settings</Link></p>
-          <p className="br-pill mv3 inline-flex mh5 ma"><Link to='/order'>Order</Link></p>
-          <p className="br-pill mv3 inline-flex mh5 ma"><Link to='/ourshops'>Our Shops</Link></p>
+        <div className="acctInfo flex flex-inline tc">
+          <p className="mt5 center"><Link to='/account'>Account Settings</Link></p>
+          <p className="mt5 center"><Link to='/order'>Order</Link></p>
+          <p className="mt5 center"><Link to='/ourshops'>Our Shops</Link></p>
         </div>
         <div className="mainNav tc fl w-40">
         </div>
