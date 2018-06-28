@@ -4,15 +4,15 @@
 
 .order {
   margin: 0 auto;
+  margin-bottom: 5vh;
   width: 90vw;
-  height: 80vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-image: url('../../Images/background1.jpg');
   background-size: cover;
   background-position: bottom;
-  height: 90vh;
   /* opacity: 0.4; */
 }
 

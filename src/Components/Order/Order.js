@@ -11,6 +11,7 @@ class Order extends Component {
     {
       this.state.drinks.forEach(el => {
         let item = document.createElement('tr');
+        let itemImg = document.createElement('img');
         item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         item.textContent = el.name;
         document.getElementById('drinks-list').appendChild(item);
@@ -22,9 +23,11 @@ class Order extends Component {
       this.state.pastries.forEach(el => {
         let item = document.createElement('tr');
         let itemImg = document.createElement('img');
+        let itemSelect = document.createElement('input');
         item.classList.add('pv5', 'ph4', 'tableRow', 'bb');
-        console.log(item.classList);
         item.textContent = el.name;
+        itemSelect.attributes.type = 'checkbox';
+        console.log(itemSelect.attributes.type);
         document.getElementById('pastries-list').appendChild(item);
       });
     }
@@ -85,10 +88,7 @@ class Order extends Component {
         </div>
         <div id="tabContent">
           <div id="coffee-panel" className="item-pane firstPane">
-            <table
-              className="item-table flex flex-column justify-around"
-              id="drinks-list"
-            >
+            <table className="item-table flex flex-column" id="drinks-list">
               {/* <img
                             className="coffeeImg"
                             src="http://via.placeholder.com/1000x1000"
@@ -96,10 +96,7 @@ class Order extends Component {
             </table>
           </div>
           <div id="pastry-panel" className="item-pane secondPane hidden">
-            <table
-              className="item-table flex flex-column justify-around"
-              id="pastries-list"
-            />
+            <table className="item-table flex flex-column" id="pastries-list" />
           </div>
         </div>
       </div>
