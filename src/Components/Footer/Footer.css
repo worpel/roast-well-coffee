@@ -20,8 +20,10 @@ footer {
     font-family: 'Pontano Sans', sans-serif;
 }
 
-.instagram {
-    height: 25vh;
-    width: 25vh;
+.instagram,
+.tile2,
+.tile3 {
+    height: 18vh;
+    width: 18vh;
     justify-content: right;
 }

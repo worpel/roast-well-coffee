@@ -6,7 +6,7 @@ import './Homepage.css';
 const Homepage = () => {
   return (
     <div className="center homepage">
-      <img src={"../../Images/background1.jpg"} />
+      {/* <img src={"../../Images/background1.jpg"} /> */}
     </div>
   );
 }
