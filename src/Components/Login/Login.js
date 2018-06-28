@@ -4,7 +4,7 @@ import './Login.css';
 class Login extends Component {
   render() {
     return (
-      <div className="mv5 flex flex-column w-40 center">
+      <div className="mt3 mb6 flex flex-column w-40 center">
         <label htmlFor="email">Email</label>
           <input className="mb4 mt2" name="email" type="email"/>
           <label htmlFor="password">Password</label>
