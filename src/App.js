@@ -21,7 +21,7 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
-            currentUser: 4,
+            currentUser: 1,
             userName: 'Not logged in yet'
         };
     }
@@ -38,21 +38,21 @@ class App extends Component {
         const { route } = this.state;
         return (
             <Router>
-            <div className="App flex flex-column">
+                <div className="App flex flex-column">
 
-                <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
-                <Switch>
-                    <Route exact path="/" component={Homepage} />
-                    <Route path="/account" render={props => 
-                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUser={this.state.currentUser} />
-                    } />
-                    <Route path="/shops" component={OurShops} />
-                    <Route path="/order" render={props => 
-                        <Order {...props} fetchApi={this.fetchApi} />
-                    } />
-                </Switch>
-                <Footer />
-            </div>
+                    <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
+                    <Switch>
+                        <Route exact path="/" component={Homepage} />
+                        <Route path="/account" render={props =>
+                            <AccountInfo {...props} fetchApi={this.fetchApi} currentUser={this.state.currentUser} />
+                        } />
+                        <Route path="/shops" component={OurShops} />
+                        <Route path="/order" render={props =>
+                            <Order {...props} fetchApi={this.fetchApi} />
+                        } />
+                    </Switch>
+                    <Footer />
+                </div>
             </Router>
         );
     }
