@@ -23,7 +23,7 @@ class Navbar extends Component {
           <p className="ph2 center"><Link to='/ourshops'>Our Shops</Link></p>
         </div>
         <div>
-        <p className="tc f3">4<FontAwesomeIcon icon="star" /></p>
+        <p className="tc f3">4</p>
         </div>
       </nav>
     );
