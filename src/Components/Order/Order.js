@@ -13,16 +13,21 @@ class Order extends Component {
         let row = document.createElement('tr');
         let nameTd = document.createElement('td');
         let sizeTd = document.createElement('td');
+        let milkTd = document.createElement('td');
         let selectBox = document.createElement('select');
-        console.log(el);
+        let selectBox2 = document.createElement('select');
         selectBox.innerHTML = `<option>${el.sizes[0]}</option><option>${
           el.sizes[1]
         }</option>`;
+        selectBox2.innerHTML = `<option>${el.milk[0]}</option><option>${
+          el.milk[1]
+        }</option>`;
         sizeTd.appendChild(selectBox);
+        milkTd.appendChild(selectBox);
         nameTd.textContent = el.name;
-        console.log(nameTd);
         row.appendChild(nameTd);
         row.appendChild(sizeTd);
+        row.appendChild(milkTd);
         row.classList.add('pv5', 'ph4', 'tableRow', 'bb');
         // let itemImg = document.createElement('img');
         // let itemSelect = document.createElement('option');
