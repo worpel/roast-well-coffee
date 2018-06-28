@@ -3,33 +3,21 @@
     background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)), url('../../Images/background12.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    /* height: 90vh; */
     width: 100%;
     opacity: 0.8;
 }
 
-.Shop1 {
-    background: url('../../Images/background3.jpg');
-    width: 40vw;
-    height: 30vw;
+.shop1, .shop2 {
+    width: 50vh;
+    height: 50vh;
     display: flex;
     background-size: cover;
-    margin: 3rem;
-}
-
-.Shop2 {
-    background: url('../../Images/background4.jpg');
-    width: 40vw;
-    height: 30vw;
     background-position: center;
-    background-size: cover;
-    margin: 3rem;
 }
 
-/* .Map1 {
-    
+.map1 img, .map2 img {
+    margin: 0 auto;
+    height: 50vh;
+    width: 50vh;
 }
-
-.Map2 {
-
-} */
