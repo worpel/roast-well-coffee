@@ -18,10 +18,7 @@ class Navbar extends Component {
           <p className="username">{user.name ? user.name : 'Welcome'}</p>
         </div>
         <div className="acctInfo flex flex-inline tc">
-          {loggedIn ?
-            <p className="ph2 center linkitem"><Link to='/account'>Account</Link></p>
-            :
-            <p className="ph2 center linkitem"><Link to='/account'>Log In</Link></p>}
+            <p className="ph2 center linkitem"><Link to='/account'>{loggedIn ? 'Account' : 'Log In'}</Link></p>
           <p className="hBreak">|</p>
           <p className="ph2 center linkitem"><Link to='/order'>Order</Link></p>
           <p className="hBreak">|</p>
