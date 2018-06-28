@@ -37,7 +37,7 @@ class App extends Component {
     };
 
     checkUserLogin = userdata => {
-        const {email, password} = userdata;
+        const { email, password } = userdata;
         this.setState({
             loggedIn: true
         })
@@ -47,26 +47,26 @@ class App extends Component {
         const { route } = this.state;
         return (
             <Router>
-            <div className="App flex flex-column">
+                <div className="App flex flex-column">
 
-                <Navbar userName={this.state.userName} loggedIn={this.state.loggedIn}/>
-                <Switch>
-                    <Route exact path="/" component={Homepage} />
-                    {this.state.loggedIn === true ?
-                        <Route path="/account" render={props => 
-                        <AccountInfo {...props} fetchApi={this.fetchApi} currentUserId={this.state.currentUserId} />
-                    } />
-                    :
-                    <Route path="/login" render={props => 
-                        <Login {...props} fetchApi={this.checkUserLogin} />
-                    }/>}
-                    <Route path="/shops" component={OurShops} />
-                    <Route path="/order" render={props => 
-                        <Order {...props} fetchApi={this.fetchApi} />
-                    } />
-                </Switch>
-                <Footer />
-            </div>
+                    <Navbar userName={this.state.userName} loggedIn={this.state.loggedIn} />
+                    <Switch>
+                        <Route exact path="/" component={Homepage} />
+                        {this.state.loggedIn === true ?
+                            <Route path="/account" render={props =>
+                                <AccountInfo {...props} fetchApi={this.fetchApi} currentUserId={this.state.currentUserId} />
+                            } />
+                            :
+                            <Route path="/login" render={props =>
+                                <Login {...props} fetchApi={this.checkUserLogin} />
+                            } />}
+                        <Route path="/ourshops" component={OurShops} />
+                        <Route path="/order" render={props =>
+                            <Order {...props} fetchApi={this.fetchApi} />
+                        } />
+                    </Switch>
+                    <Footer />
+                </div>
             </Router>
         );
     }
