@@ -29,7 +29,7 @@ class App extends Component {
         super();
         this.state = {
             route: 'home',
-            currentUser: 4,
+            currentUser: 2,
             userName: 'Not logged in yet'
         };
     }
@@ -46,7 +46,7 @@ class App extends Component {
         const { route } = this.state;
         return (
             <Router>
-            <div className="App">
+            <div className="App flex flex-column">
 
                 <Navbar route={route} onRouteChange={this.onRouteChange} userName={this.state.userName} />
                 <Switch>
