@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import insta from '../../Images/instacoffee.jpg'
+import insta from '../../Images/instacoffee.jpg';
+import tile2 from '../../Images/doggo.jpg';
+import tile3 from '../../Images/flaskcoffee.jpg';
+
 
 class Footer extends Component {
   render() {
@@ -29,14 +32,21 @@ class Footer extends Component {
           </div>
           <div className='stylefooter'>
             <div className="Map fl w-30">
-              <p className='f4 center'>Instagram</p>
-              <img className='instagram shadow-5' src={insta} />
-
+              <p className='f3 center'>Instagram</p>
+              <img className='instagram shadow-6' src={insta} />
+              <img className='tile2 shadow-6' src={tile2} />
+              <img className='tile3 shadow-6' src={tile3} />
             </div>
             <div className="flex socials fl w-100">
-              <p>Facebook</p>
-              <p>Twitter</p>
-              <p>Feefo</p>
+              <a href="">
+                <p>Facebook</p>
+              </a>
+              <a href="">
+                <p>Twitter</p>
+              </a>
+              <a href="">
+                <p>Feefo</p>
+              </a>
             </div>
           </div>
 

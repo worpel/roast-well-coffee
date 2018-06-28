@@ -1,0 +1,11 @@
+.submit {
+    border: 1px solid black;
+    border-radius: 20%;
+    transition: 400ms;
+}
+
+.submit:hover {
+    background: black;
+    color: white;
+    transition: 300ms;
+}
