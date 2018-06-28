@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Checkbox from './Checkbox';
 import './Order.css';
 
 class Order extends Component {
