@@ -13,6 +13,17 @@ class AccountInfo extends Component {
             history: []
         };
     }
+
+    updateHistory = data => {
+        this.state.history.forEach(el => {
+            let newItem = document.createElement('div');
+            newItem.innerHTML = this.state.type === 'personal' ?
+            `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}` :
+            `<p>${el.name}(£${el.price.toFixed(2)}) x ${el.quantity} - £${(el.quantity*el.price).toFixed(2)}`
+            document.getElementById(`${this.state.type}History`).appendChild(newItem)
+        })
+    }
+
     componentDidMount() {
         const { fetchApi, currentUser } = this.props;
         fetchApi(`users/${currentUser}`)
@@ -37,11 +48,7 @@ class AccountInfo extends Component {
                 this.setState({
                     history: productsOrdered
                 });
-                this.state.history.forEach(el => {
-                    let newItem = document.createElement('div');
-                    newItem.innerHTML = `<p>${el.size ? el.size : ''} ${el.name} - £${el.price.toFixed(2)}`
-                    document.getElementById(`${this.state.type}History`).appendChild(newItem)
-                })
+                this.updateHistory(this.state.history);
             })
             .catch(err => {
                 console.log(err);
