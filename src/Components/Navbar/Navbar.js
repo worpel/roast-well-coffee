@@ -7,6 +7,7 @@ import octagon from '../../Images/octagon.png'
 
 class Navbar extends Component {
   render() {
+    const {loggedIn} = this.props;
     return (
 
       <nav className="mv5 mh2 flex justify-between items-center">
@@ -17,7 +18,10 @@ class Navbar extends Component {
           <p className="username">Username</p>
         </div>
         <div className="acctInfo flex flex-inline tc">
-          <p className="ph2 center linkitem"><Link to='/account'>Account Settings</Link></p>
+          {loggedIn ?
+            <p className="ph2 center linkitem"><Link to='/account'>Account</Link></p>
+            :
+            <p className="ph2 center linkitem"><Link to='/login'>Log In</Link></p>}
           <p className="hBreak">|</p>
           <p className="ph2 center linkitem"><Link to='/order'>Order</Link></p>
           <p className="hBreak">|</p>
