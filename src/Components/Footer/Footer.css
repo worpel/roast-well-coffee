@@ -24,10 +24,10 @@ footer {
 }
 
 @media screen and (max-width: 1107px) {
-    .openingHours p, .locationInfo p {
+    .openingHours p,
+    .locationInfo p {
         font-size: 1rem;
     }
-
     .stylefooter img {
         height: 14vh;
         width: 14vh;
@@ -35,7 +35,8 @@ footer {
 }
 
 @media screen and (max-width: 976px) {
-    .locationInfo, .openingHours {
+    .locationInfo,
+    .openingHours {
         width: 45vw !important;
         text-align: center;
     }
@@ -47,7 +48,7 @@ footer {
     .images {
         justify-content: center;
     }
-    footer{
+    footer {
         align-items: center;
     }
 }
